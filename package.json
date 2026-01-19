@@ -1,6 +1,6 @@
 {
   "name": "extension-scan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scan directories and list found file extensions",
   "main": "index.js",
   "bin": {
