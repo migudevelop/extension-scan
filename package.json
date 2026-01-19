@@ -1,0 +1,44 @@
+{
+  "name": "extension-scan",
+  "version": "1.0.0",
+  "description": "Scan directories and list found file extensions",
+  "main": "index.js",
+  "bin": {
+    "extension-scan": "./bin.js"
+  },
+  "scripts": {
+    "start": "node bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migudevelop/extension-scan.git"
+  },
+  "homepage": "https://github.com/migudevelop/extension-scan#readme",
+  "keywords": [
+    "extension-scan",
+    "node",
+    "list",
+    "files",
+    "extensions",
+    "scanner",
+    "cli",
+    "tool",
+    "directory",
+    "project"
+  ],
+  "author": "Miguel Martínez",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "scanner.js",
+    "bin.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "preferGlobal": true,
+  "packageManager": "pnpm@10.23.0",
+  "dependencies": {
+    "commander": "14.0.2",
+    "fast-glob": "3.3.3"
+  }
+}
