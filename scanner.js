@@ -20,9 +20,8 @@ async function scanExtensions(dirPath = process.cwd(), options = {}) {
   } = options;
 
   try {
-    //
     const files = await fg("**/*", {
-      cwd: dirPath,
+      cwd: path.resolve(dirPath),
       dot: includeHidden,
       ignore: ignore,
       onlyFiles: true,
@@ -32,13 +31,13 @@ async function scanExtensions(dirPath = process.cwd(), options = {}) {
     const extensionMap = new Map();
 
     files.forEach((file) => {
-      const ext = path.extname(file);
-      const extension = ext ? ext.slice(1) : "(no extension)";
-
-      if (!extensionMap.has(extension)) {
-        extensionMap.set(extension, []);
+      const extension = path.extname(file);
+      if (extension !== "") {
+        if (!extensionMap.has(extension)) {
+          extensionMap.set(extension, []);
+        }
+        extensionMap.get(extension).push(file);
       }
-      extensionMap.get(extension).push(file);
     });
 
     if (onlyExtensions) {

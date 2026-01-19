@@ -53,8 +53,8 @@ program
       console.log("─".repeat(60));
 
       results.forEach(({ extension, files, totalFiles }) => {
-        console.log(`\n📁 ${extension}`);
-        console.log(`   Total: ${totalFiles} file(s)`);
+        console.log(`\n📝 ${extension}:   Total: ${totalFiles} file(s)`);
+        // console.log(`   Total: ${totalFiles} file(s)`);
 
         if (verbose) {
           console.log("   Files:");
